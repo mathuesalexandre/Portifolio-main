@@ -542,3 +542,100 @@ span{
         margin-top: 2rem;
     }
 }
+
+/* Estilização geral da seção Contact */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total da janela */
+    background-color: var(--bg-color); /* Cor de fundo escura */
+    flex-direction: column;
+}
+
+/* Título */
+.contact h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #fff; /* Altera o título para branco */
+    text-align: center;
+    text-transform: uppercase;
+    perspective: 1000px; /* Cria um efeito 3D */
+}
+
+/* Divisor */
+.divider {
+    width: 0;
+    height: 2px;
+    background-color: #c94c4c;
+    margin: 0 auto 20px auto;
+    border: none;
+    transition: width 0.5s ease;
+}
+
+.contact h2:hover + .divider {
+    width: 50px;
+}
+
+/* Container de conteúdo de contato */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Aumenta o espaçamento */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Garante a centralização vertical */
+    transform: rotateX(10deg); /* Adiciona rotação para efeito 3D */
+    perspective: 1000px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Itens de contato individuais */
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; /* Habilita efeitos 3D */
+    transition: transform 0.3s ease; /* Suaviza a transição do efeito */
+}
+
+.contact-item:hover {
+    transform: rotateY(20deg) translateZ(10px); /* Efeito de rotação 3D ao passar o mouse */
+}
+
+/* Ícones de contato */
+.contact-item .icon {
+    font-size: 2rem; /* Aumenta o tamanho do ícone */
+    color: #fff; /* Altera a cor para branco */
+    margin-right: 10px;
+}
+
+/* Links de contato */
+.contact-item a {
+    font-size: 2.5rem;
+    color: #fff; /* Cor branca */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona transições */
+}
+
+.contact-item a:hover {
+    color: #c94c4c; /* Muda a cor no hover */
+    text-decoration: underline;
+    transform: scale(1.1); /* Aumenta o tamanho do link no hover */
+}
+
+/* Texto explicativo dos links */
+.contact-item .click-here {
+    color: #c94c4c;
+    margin-left: 5px;
+}
+
+.contact-item .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+    transform: rotateX(5deg); /* Pequeno efeito 3D no texto */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    transform: translateZ(5px); /* Efeito de profundidade no hover */
+}
